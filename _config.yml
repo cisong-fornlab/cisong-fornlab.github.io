@@ -1,0 +1,22 @@
+title: Ci Song | 学术主页
+description: 理论物理研究 | 观察-反馈闭合框架 | 天津农学院
+theme: minima
+
+# 导航栏
+header_pages:
+  - index.md
+  - about.md
+  - stats.md
+
+# 作者信息
+author:
+  name: Ci Song (宋词)
+  email: cisong@tjau.edu.cn
+
+# 社交媒体链接
+social_links:
+  - platform: orcid
+    url: https://orcid.org/0009-0005-2874-1710
+  - platform: github
+    url: https://github.com/cisong-fornlab
+    
