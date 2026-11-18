@@ -8,10 +8,10 @@ header_pages:
   - about.md
   - stats.md
 
-# 作者信息
-author:
-  name: Ci Song (宋词)
-  email: cisong@tjau.edu.cn
+# 作者信息（删除或注释掉错误的 author 配置）
+# author:
+#   name: Ci Song (宋词)
+#   email: cisong@tjau.edu.cn
 
 # 社交媒体链接
 social_links:
@@ -19,4 +19,3 @@ social_links:
     url: https://orcid.org/0009-0005-2874-1710
   - platform: github
     url: https://github.com/cisong-fornlab
-    
