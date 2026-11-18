@@ -39,26 +39,26 @@ title: Ci Song | 学术主页
 
 | 版本 | 日期 | 标题 | DOI |
 |------|------|------|-----|
-| v1.5.0 | 2026-08-09 | [Observation–Feedback Closure I: A Self-Consistent Relational Reconstruction...](./papers/of-closure-v1.5.0.html) | [10.5281/zenodo.21859450](https://doi.org/10.5281/zenodo.21859450) |
-| v1.4.0 | 2026-07-20 | [Observation–Feedback Closure I v1.4.0...](./papers/of-closure-v1.4.0.html) | [10.5281/zenodo.21443737](https://doi.org/10.5281/zenodo.21443737) |
-| v1.3.0 | 2026-06-29 | [Observation–Feedback Closure I: A Causal-Hypergraph Generalization...](./papers/of-closure-v1.3.0.html) | [10.5281/zenodo.21030804](https://doi.org/10.5281/zenodo.21030804) |
-| v1.2.0 | 2026-06-17 | [Observation–Feedback Closure I: A Self-Consistent Relational Framework...](./papers/of-closure-v1.2.0.html) | [10.5281/zenodo.20726229](https://doi.org/10.5281/zenodo.20726229) |
-| v1.1.1 | 2026-05-28 | [Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof...](./papers/of-closure-v1.1.1.html) | [10.5281/zenodo.20421174](https://doi.org/10.5281/zenodo.20421174) |
-| v1.1.0 | 2026-05-27 | [Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof...](./papers/of-closure-v1.1.0.html) | [10.5281/zenodo.20406615](https://doi.org/10.5281/zenodo.20406615) |
-| v1.0.0 | 2026-05-18 | [Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof...](./papers/of-closure-v1.0.0.html) | [10.5281/zenodo.20271957](https://doi.org/10.5281/zenodo.20271957) |
+| v1.5.0 | 2026-08-09 | [Observation–Feedback Closure I (v1.5.0): A Self-Consistent Relational Reconstruction from Directed Processes and Internal Occurrence Arithmetic to Functional Dimensionality and Conditional Geometric, Temporal, and Topological Extensions](./papers/of-closure-v1.5.0.html) | [10.5281/zenodo.21859450](https://doi.org/10.5281/zenodo.21859450) |
+| v1.4.0 | 2026-07-20 | [Observation–Feedback Closure I v1.4.0: A Self-Consistent Relational Reconstruction Framework for Kinematics, Identity Closure, and Conditional Structural Correspondences](./papers/of-closure-v1.4.0.html) | [10.5281/zenodo.21443737](https://doi.org/10.5281/zenodo.21443737) |
+| v1.3.0 | 2026-06-29 | [Observation–Feedback Closure I: A Causal-Hypergraph Generalization of Event-Counting Kinematics with Sheaf-Reconstructible Stable Identity](./papers/of-closure-v1.3.0.html) | [10.5281/zenodo.21030804](https://doi.org/10.5281/zenodo.21030804) |
+| v1.2.0 | 2026-06-17 | [Observation–Feedback Closure I: A Self-Consistent Relational Framework for the Interpretational Reconstruction of Time, Structural Scales, Relational Space, and Local Lorentzian Kinematics](./papers/of-closure-v1.2.0.html) | [10.5281/zenodo.20726229](https://doi.org/10.5281/zenodo.20726229) |
+| v1.1.1 | 2026-05-28 | [Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof for Time, Structural Scales, Relational Space, and Lorentzian Kinematics](./papers/of-closure-v1.1.1.html) | [10.5281/zenodo.20421174](https://doi.org/10.5281/zenodo.20421174) |
+| v1.1.0 | 2026-05-27 | [Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof for Time, Structural Scales, Relational Space, and Lorentzian Kinematics](./papers/of-closure-v1.1.0.html) | [10.5281/zenodo.20406615](https://doi.org/10.5281/zenodo.20406615) |
+| v1.0.0 | 2026-05-18 | [Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof for Time, Structural Scales, Relational Space, and Lorentzian Kinematics](./papers/of-closure-v1.0.0.html) | [10.5281/zenodo.20271957](https://doi.org/10.5281/zenodo.20271957) |
 
 #### RCS Framework 系列
 
 | 版本 | 日期 | 标题 | DOI |
 |------|------|------|-----|
-| v1.1 | 2026-09-26 | [Stable Continuum-Valued Observables from Finite Refinement Measurements...](./papers/rcs-v1.1.html) | [10.5281/zenodo.22974921](https://doi.org/10.5281/zenodo.22974921) |
-| v1.0 | 2026-09-26 | [Stable Continuum-Valued Observables from Finite Refinement Measurements...](./papers/rcs-v1.0.html) | [10.5281/zenodo.22962538](https://doi.org/10.5281/zenodo.22962538) |
+| v1.1 | 2026-09-26 | [Stable Continuum-Valued Observables from Finite Refinement Measurements: The RCS Framework and Its Physical Spectrum](./papers/rcs-v1.1.html) | [10.5281/zenodo.22974921](https://doi.org/10.5281/zenodo.22974921) |
+| v1.0 | 2026-09-26 | [Stable Continuum-Valued Observables from Finite Refinement Measurements: The RCS Framework and Its Physical Spectrum](./papers/rcs-v1.0.html) | [10.5281/zenodo.22962538](https://doi.org/10.5281/zenodo.22962538) |
 
 #### 其他相关论文
 
 | 版本 | 日期 | 标题 | DOI |
 |------|------|------|-----|
-| v1 | 2026-05-08 | [Towards a Relational Account of Spacetime Symmetries...](./papers/relational-symmetries.html) | [10.5281/zenodo.20085612](https://doi.org/10.5281/zenodo.20085612) |
+| v1 | 2026-05-08 | [Towards a Relational Account of Spacetime Symmetries and Structural Scales: An Axiomatic Framework and Algebraic Minimal Realization Based on Observation–Feedback Closure](./papers/relational-symmetries.html) | [10.5281/zenodo.20085612](https://doi.org/10.5281/zenodo.20085612) |
 
 ---
 
