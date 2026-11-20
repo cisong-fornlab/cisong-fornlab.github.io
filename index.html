@@ -3,404 +3,453 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ci Song (宋词) - 学术主页</title>
-  <meta name="description" content="宋词 (Ci Song) 的个人学术主页：量子力学、观察-反馈闭合理论、分布式网络等研究成果与论文列表。">
+  <title>FORN Lab · 关系网络基础原理实验室</title>
+  <meta name="description" content="FORN Lab（Foundation of Relational Networks Laboratory，关系网络基础原理实验室）：一项以共识为出发点、贯通物理理论与社会学理论的跨学科研究计划。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --nav-bg: #1a1a2e;
-    --nav-height: 52px;
-    --link-color: #2a7ae2;
+    --bg: #ffffff;
+    --ink: #1f2430;
+    --ink-soft: #4d5566;
+    --ink-faint: #8b93a5;
+    --accent: #4f46e5;
+    --c-math: #2563eb;
+    --c-physics: #7c3aed;
+    --c-literature: #0d9488;
+    --c-philosophy: #b45309;
+    --c-sociology: #059669;
+    --c-entertainment: #db2777;
+    --serif: 'EB Garamond', 'Noto Serif SC', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   }
 
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
 
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--nav-height) + 12px);
-  }
+  html { scroll-behavior: smooth; }
 
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    line-height: 1.7;
-    color: #222;
-    background: #fff;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.75;
   }
 
-  /* ===== 顶部导航栏 ===== */
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ===== 内容区统一 80% 宽，左右各 10% ===== */
+  .wrap {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ===== 顶部导航 ===== */
   .site-nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    height: var(--nav-height);
-    background: var(--nav-bg);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e7e9f0;
+  }
+  .site-nav .wrap {
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
-  .site-nav .nav-title {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.05em;
-    margin-right: 28px;
-    white-space: nowrap;
+  .brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  .brand:hover { text-decoration: none; }
+  .brand .brand-en {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .brand .brand-zh {
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.32em;
   }
 
   .site-nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
+    gap: 26px;
   }
-
-  .site-nav a {
-    color: #cfd2dc;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.95em;
-    white-space: nowrap;
+  .site-nav ul a {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    transition: color 160ms ease-out;
   }
-
-  .site-nav a:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.12);
+  .site-nav ul a:hover {
+    color: var(--accent);
     text-decoration: none;
   }
 
-  .page-content {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 24px 20px 40px;
+  /* ===== 首屏 ===== */
+  .hero {
+    text-align: center;
+    padding-top: 72px;
   }
-
-  table {
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    letter-spacing: 0.18em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .hero .hero-zh {
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 2.4vw, 1.5rem);
+    letter-spacing: 0.55em;
+    color: var(--accent);
+    margin: 0 0 30px;
+  }
+  .hero .hero-mission {
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+    line-height: 2;
+    color: var(--ink-soft);
+    margin: 0 auto 14px;
+    max-width: 40rem;
+  }
+  .hero .hero-en-sub {
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 44px;
+  }
+  .hero figure {
+    margin: 0;
+  }
+  .hero img {
     width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-size: 0.95em;
-    margin-bottom: 20px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 18px 50px rgba(31, 36, 48, 0.16);
   }
 
-  th, td {
-    padding: 10px 8px;
-    text-align: left;
-    vertical-align: top;
-    word-wrap: break-word;
+  /* ===== 内容区块 ===== */
+  section.block {
+    padding: 88px 0 8px;
+  }
+  .sec-head { margin-bottom: 40px; }
+  .sec-head .sec-en {
+    display: block;
+    font-family: var(--serif);
+    font-size: 0.8rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .sec-head h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+    letter-spacing: 0.14em;
+    margin: 0;
+  }
+  .sec-head .sec-rule {
+    margin-top: 18px;
+    width: 64px;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.55;
   }
 
-  th {
-    background-color: #f5f5f5;
-    font-weight: bold;
+  .about-body {
+    max-width: 46rem;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+  }
+  .about-body strong { color: var(--ink); }
+  .about-body .lab-full {
+    font-family: var(--serif);
+    color: var(--ink);
   }
 
-  tr:nth-child(even) {
-    background-color: #fafafa;
+  .person-link {
+    display: inline-block;
+    margin-top: 34px;
+    padding: 13px 34px;
+    border: 1.5px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    transition: background 180ms ease-out, color 180ms ease-out;
   }
-
-  a {
-    color: var(--link-color);
+  .person-link:hover {
+    background: var(--accent);
+    color: #fff;
     text-decoration: none;
   }
+  .person-link .arrow { margin-left: 8px; }
 
-  a:hover {
-    text-decoration: underline;
+  /* ===== 作品入口网格 ===== */
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .tile {
+    position: relative;
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f2f4f8;
+    box-shadow: 0 6px 22px rgba(31, 36, 48, 0.10);
+    transition: transform 220ms ease-out, box-shadow 220ms ease-out;
+  }
+  .tile:hover,
+  .tile:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(31, 36, 48, 0.18);
+    text-decoration: none;
+  }
+  .tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 500ms ease-out;
+  }
+  .tile:hover img { transform: scale(1.05); }
+  .tile .tile-label {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 40px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.96) 42%, rgba(255, 255, 255, 0));
+  }
+  .tile .tile-zh {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+  }
+  .tile .tile-en {
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .tile .tile-bar {
+    width: 38px;
+    height: 3px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+  }
+  /* 各栏目色彩 */
+  .tile.t-math .tile-zh          { color: var(--c-math); }
+  .tile.t-math .tile-bar         { background: var(--c-math); }
+  .tile.t-physics .tile-zh       { color: var(--c-physics); }
+  .tile.t-physics .tile-bar      { background: var(--c-physics); }
+  .tile.t-literature .tile-zh    { color: var(--c-literature); }
+  .tile.t-literature .tile-bar   { background: var(--c-literature); }
+  .tile.t-philosophy .tile-zh    { color: var(--c-philosophy); }
+  .tile.t-philosophy .tile-bar   { background: var(--c-philosophy); }
+  .tile.t-sociology .tile-zh     { color: var(--c-sociology); }
+  .tile.t-sociology .tile-bar    { background: var(--c-sociology); }
+  .tile.t-entertainment .tile-zh { color: var(--c-entertainment); }
+  .tile.t-entertainment .tile-bar{ background: var(--c-entertainment); }
+
+  /* ===== 页脚 ===== */
+  footer {
+    margin-top: 100px;
+    border-top: 1px solid #e7e9f0;
+    padding: 40px 0 50px;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 0.85rem;
+  }
+  footer .foot-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 26px;
+    margin-bottom: 14px;
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 900px) {
+    .works-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .wrap { width: 88%; }
+    .site-nav ul { gap: 16px; }
+    .brand .brand-zh { display: none; }
+    .works-grid { grid-template-columns: 1fr; gap: 16px; }
+    section.block { padding-top: 64px; }
   }
 
-  /* 移动端适配：导航允许横向滚动 */
-  @media (max-width: 640px) {
-    .page-content {
-      max-width: 100%;
-    }
-    .site-nav ul {
-      overflow-x: auto;
-      flex-wrap: nowrap;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .tile, .tile img { transition: none; }
   }
 </style>
-<base target="_blank">
 </head>
 <body>
 
-<nav class="site-nav">
-  <span class="nav-title">Ci Song · 宋词</span>
-  <ul>
-    <li><a href="#about">简介</a></li>
-    <li><a href="#education">教育背景</a></li>
-    <li><a href="#publications">论文发表</a></li>
-    <li><a href="#preprints">预印本</a></li>
-    <li><a href="#stats">统计</a></li>
-    <li><a href="#contact">联系</a></li>
-  </ul>
-</nav>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-en">FORN Lab</span>
+      <span class="brand-zh">关系网络基础原理实验室</span>
+    </a>
+    <nav aria-label="主导航">
+      <ul>
+        <li><a href="#about">实验室</a></li>
+        <li><a href="#works">当前作品</a></li>
+        <li><a href="about.html">宋词主页</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<div class="page-content">
+<main>
+  <!-- 首屏 -->
+  <section class="hero wrap">
+    <h1>FORN Lab</h1>
+    <p class="hero-zh">关系网络基础原理实验室</p>
+    <p class="hero-mission">
+      以共识为出发点，<br>
+      从基本粒子间的相互作用，<br>
+      到人与人之间的社会关系。
+    </p>
+    <p class="hero-en-sub">Foundation of Relational Networks Laboratory</p>
+    <figure>
+      <img src="assets/img/fornlab.png" alt="星系与关系网络交织的深空图景">
+    </figure>
+  </section>
 
-<h1 id="about">Ci Song (宋词)</h1>
+  <!-- 实验室介绍 -->
+  <section class="block wrap" id="about">
+    <div class="sec-head">
+      <span class="sec-en">About the Lab</span>
+      <h2>FORN Lab 介绍</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="about-body">
+      <p>
+        <strong>FORN Lab</strong>（<span class="lab-full">Foundation of Relational Networks Laboratory</span>，关系网络基础原理实验室）由宋词创立。此前，「田文艺传做工作室」的探索与实践，为这间实验室的创建奠定了基础。
+      </p>
+      <p>
+        FORN Lab 是一项<strong>跨学科研究计划</strong>。实验室以「共识」为出发点，致力于构建一条连贯的理论脉络：向下深入基本粒子间相互作用的物理理论，向上延伸至人类个体与个体之间社会关系的社会学理论——并在这个过程中，重新审视数学、计算与哲学所扮演的基础性角色。
+      </p>
+      <p>
+        从物理世界到人类社会，我们相信：宇宙的可理解性与社会的可共识性，或许共享着同一种深层结构。
+      </p>
+      <a class="person-link" href="about.html">宋词主页<span class="arrow">→</span></a>
+    </div>
+  </section>
 
-<p>
-  <strong>现任职位</strong>: 天津农学院 计算机与信息工程学院 (2016.7 - 至今)<br>
-  <strong>邮箱</strong>: cisong@tjau.edu.cn | cisong@fornlab.org<br>
-  <strong>研究领域</strong>: 量子力学、量子场论、广义相对论、分析力学、观察-反馈闭合理论、分布式网络、计算理论、密码学、机器学习与深度学习算法、共识算法
-</p>
+  <!-- 当前作品 -->
+  <section class="block wrap" id="works">
+    <div class="sec-head">
+      <span class="sec-en">Current Works</span>
+      <h2>当前作品</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="works-grid">
+      <a class="tile t-math" href="works-math.html">
+        <img src="assets/img/math.png" alt="数学：黄金分割螺旋与柏拉图立体">
+        <span class="tile-label">
+          <span class="tile-bar"></span>
+          <span class="tile-zh">数学</span>
+          <span class="tile-en">Mathematics</span>
+        </span>
+      </a>
+      <a class="tile t-physics" href="works-physics.html">
+        <img src="assets/img/physics.png" alt="物理：原子轨道与粒子轨迹">
+        <span class="tile-label">
+          <span class="tile-bar"></span>
+          <span class="tile-zh">物理</span>
+          <span class="tile-en">Physics</span>
+        </span>
+      </a>
+      <a class="tile t-literature" href="works-literature.html">
+        <img src="assets/img/literature.png" alt="文学：月相七章，从峨眉月到残月">
+        <span class="tile-label">
+          <span class="tile-bar"></span>
+          <span class="tile-zh">文学</span>
+          <span class="tile-en">Literature</span>
+        </span>
+      </a>
+      <a class="tile t-philosophy" href="works-philosophy.html">
+        <img src="assets/img/philosophy.png" alt="哲学：星空下的沉思者">
+        <span class="tile-label">
+          <span class="tile-bar"></span>
+          <span class="tile-zh">哲学</span>
+          <span class="tile-en">Philosophy</span>
+        </span>
+      </a>
+      <a class="tile t-sociology" href="works-sociology.html">
+        <img src="assets/img/sociology.png" alt="社会学：由光网络连接的人群剪影">
+        <span class="tile-label">
+          <span class="tile-bar"></span>
+          <span class="tile-zh">社会学</span>
+          <span class="tile-en">Sociology</span>
+        </span>
+      </a>
+      <a class="tile t-entertainment" href="works-entertainment.html">
+        <img src="assets/img/entertainment.png" alt="娱乐：棋子、音符与戏剧面具的星座">
+        <span class="tile-label">
+          <span class="tile-bar"></span>
+          <span class="tile-zh">娱乐</span>
+          <span class="tile-en">Entertainment</span>
+        </span>
+      </a>
+    </div>
+  </section>
+</main>
 
-<hr>
-
-<h2 id="education">教育背景</h2>
-
-<ul>
-  <li><strong>博士</strong> (2009-2015): 南开大学 陈省身数学研究所</li>
-  <li><strong>硕士</strong> (2006-2009): 南开大学 陈省身数学研究所</li>
-  <li><strong>学士</strong> (2001-2005): 天津大学 理学院</li>
-</ul>
-
-<hr>
-
-<h2 id="publications">论文发表</h2>
-
-<h3>📰 期刊论文 (已正式发表)</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th style="width: 5%;">发表时间</th>
-      <th style="width: 24%;">作者</th>
-      <th style="width: 38%;">题目</th>
-      <th style="width: 33%;">期刊及页码</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>2015</td>
-      <td>Song, Ci*; Li, Wen-Du*; Mwansa, Pardon; Zhang, Ping*</td>
-      <td>Statistical problem of ideal gas in general two-dimensional regions</td>
-      <td><em>International Journal of Modern Physics B</em>, 29(2), 1450243</td>
-    </tr>
-    <tr>
-      <td>2015</td>
-      <td>Song, Ci*; Li, Yan; Chen, Jing-Ling*</td>
-      <td>Solving the Generalized Higgs Model from the Generalized CRS Model</td>
-      <td><em>Communications in Theoretical Physics</em>, (06), 665-668</td>
-    </tr>
-    <tr>
-      <td>2010</td>
-      <td>Song, Ci; Zhang, Fu-Lin*; Chen, Jing-Ling*</td>
-      <td>Applications of Polynomial Algebras to 2-Dimensional Deformed Oscillators</td>
-      <td><em>Communications in Theoretical Physics</em>, 54(3), 412-416</td>
-    </tr>
-    <tr>
-      <td>2009</td>
-      <td>Zhang, Fu-Lin*; Song, Ci; Chen, Jing-Ling*</td>
-      <td>Dynamical symmetries of two-dimensional systems in relativistic quantum mechanics</td>
-      <td><em>Annals of Physics</em>, 324, 173–177</td>
-    </tr>
-    <tr>
-      <td>2009</td>
-      <td>Niu, Kai*; Song, Ci*; Ge, Mo-Lin*</td>
-      <td>The geodesic form of light-ray trace in the inhomogeneous media</td>
-      <td><em>Optics Express</em>, 17(14), 11753-11767</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="preprints">🔬 预印本系列 (版本化更新)</h3>
-
-<h4>Observation–Feedback Closure 系列</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="width: 5%;">版本</th>
-      <th style="width: 12%;">上传日期</th>
-      <th style="width: 65%;">标题</th>
-      <th style="width: 15%;">DOI</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>v1.5.0</td>
-      <td>2026-08-09</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.21859450">
-          Observation–Feedback Closure I (v1.5.0): A Self-Consistent Relational Reconstruction from Directed Processes and Internal Occurrence Arithmetic to Functional Dimensionality and Conditional Geometric, Temporal, and Topological Extensions
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.21859450">10.5281/zenodo.21859450</a>
-      </td>
-    </tr>
-    <tr>
-      <td>v1.4.0</td>
-      <td>2026-07-20</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.21443737">
-          Observation–Feedback Closure I v1.4.0: A Self-Consistent Relational Reconstruction Framework for Kinematics, Identity Closure, and Conditional Structural Correspondences
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.21443737">10.5281/zenodo.21443737</a>
-      </td>
-    </tr>
-    <tr>
-      <td>v1.3.0</td>
-      <td>2026-06-29</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.21030804">
-          Observation–Feedback Closure I: A Causal-Hypergraph Generalization of Event-Counting Kinematics with Sheaf-Reconstructible Stable Identity
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.21030804">10.5281/zenodo.21030804</a>
-      </td>
-    </tr>
-    <tr>
-      <td>v1.2.0</td>
-      <td>2026-06-17</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20726229">
-          Observation–Feedback Closure I: A Self-Consistent Relational Framework for the Interpretational Reconstruction of Time, Structural Scales, Relational Space, and Local Lorentzian Kinematics
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20726229">10.5281/zenodo.20726229</a>
-      </td>
-    </tr>
-    <tr>
-      <td>v1.1.1</td>
-      <td>2026-05-28</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20421174">
-          Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof for Time, Structural Scales, Relational Space, and Lorentzian Kinematics
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20421174">10.5281/zenodo.20421174</a>
-      </td>
-    </tr>
-    <tr>
-      <td>v1.1.0</td>
-      <td>2026-05-27</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20406615">
-          Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof for Time, Structural Scales, Relational Space, and Lorentzian Kinematics
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20406615">10.5281/zenodo.20406615</a>
-      </td>
-    </tr>
-    <tr>
-      <td>v1.0.0</td>
-      <td>2026-05-18</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20271957">
-          Observation–Feedback Closure I: An Axiomatic Kinematical Existence Proof for Time, Structural Scales, Relational Space, and Lorentzian Kinematics
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20271957">10.5281/zenodo.20271957</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4>RCS Framework 系列</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="width: 5%;">版本</th>
-      <th style="width: 12%;">上传日期</th>
-      <th style="width: 65%;">标题</th>
-      <th style="width: 15%;">DOI</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>v1.1</td>
-      <td>2026-09-26</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.22974921">
-          Stable Continuum-Valued Observables from Finite Refinement Measurements: The RCS Framework and Its Physical Spectrum
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.22974921">10.5281/zenodo.22974921</a>
-      </td>
-    </tr>
-    <tr>
-      <td>v1.0</td>
-      <td>2026-09-26</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.22962538">
-          Stable Continuum-Valued Observables from Finite Refinement Measurements: The RCS Framework and Its Physical Spectrum
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.22962538">10.5281/zenodo.22962538</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4>其他相关论文</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="width: 5%;">版本</th>
-      <th style="width: 12%;">上传日期</th>
-      <th style="width: 65%;">标题</th>
-      <th style="width: 15%;">DOI</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>v1</td>
-      <td>2026-05-08</td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20085612">
-          Towards a Relational Account of Spacetime Symmetries and Structural Scales: An Axiomatic Framework and Algebraic Minimal Realization Based on Observation–Feedback Closure
-        </a>
-      </td>
-      <td>
-        <a href="https://doi.org/10.5281/zenodo.20085612">10.5281/zenodo.20085612</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<hr>
-
-<h2 id="stats">统计摘要</h2>
-
-<ul>
-  <li><strong>期刊论文</strong>: 5 篇 (2009-2015)</li>
-  <li><strong>预印本版本</strong>: 10 个 (2026)</li>
-</ul>
-
-<hr>
-
-<h2 id="contact">联系与链接</h2>
-
-<ul>
-  <li>📧 <strong>学校邮箱</strong>: <a href="mailto:cisong@tjau.edu.cn">cisong@tjau.edu.cn</a></li>
-  <li>📧 <strong>个人邮箱</strong>: <a href="mailto:cisong@fornlab.org">cisong@fornlab.org</a></li>
-  <li>🔗 <strong>ORCID</strong>: <a href="https://orcid.org/0009-0005-2874-1710">0009-0005-2874-1710</a></li>
-  <li>💻 <strong>GitHub</strong>: <a href="https://github.com/cisong-fornlab">cisong-fornlab</a></li>
-</ul>
-
-<hr>
-
-<p><em>网站最后更新: 2026-11-20</em></p>
-
-</div>
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="about.html">宋词主页</a>
+      <a href="https://github.com/cisong-fornlab" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://orcid.org/0009-0005-2874-1710" target="_blank" rel="noopener">ORCID</a>
+      <a href="mailto:cisong@fornlab.org">cisong@fornlab.org</a>
+    </div>
+    <p>© 2026 FORN Lab · 关系网络基础原理实验室</p>
+  </div>
+</footer>
 
 </body>
 </html>
